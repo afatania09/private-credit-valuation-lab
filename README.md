@@ -17,6 +17,8 @@ A public, educational Python toolkit for private credit valuation and credit-ris
 - Property income and refinancing: NOI, CFADS proxy, DSCR, interest coverage, direct capitalisation and LTV/DSCR borrowing constraints
 - Collateral recovery: security priority, sale haircuts, enforcement costs and recovery timing
 
+- Integrated secured-credit underwriting: NOI, DSCR covenant flag, refinance gap and conditional enforcement recovery
+
 ## Run locally
 ```bash
 python -m pip install -e ".[dev]"
@@ -26,6 +28,7 @@ python examples/portfolio_stress.py
 python examples/advanced_loan_models.py
 python examples/property_secured_loan.py
 python examples/property_income_stress.py
+python examples/integrated_underwriting.py
 python examples/property_secured_loan.py
 ```
 
@@ -46,6 +49,9 @@ The DCF model discounts *contractual* cash flows at an externally supplied rate.
 ## Property-backed credit case studies
 - [Collateral and enforcement methodology](docs/property_secured_credit.md)
 - [Income, covenant and refinancing methodology](docs/property_income_methodology.md)
+
+## Integrated underwriting case study
+[Methodology and interpretation](docs/integrated_underwriting.md). The manual-only [GitHub Actions test workflow](.github/workflows/manual-tests.yml) is intentionally not triggered on every push to minimise CI consumption.
 
 ## Project principles
 Transparent formulas, synthetic data, reproducible tests, documented assumptions, conservative CI spending, and clear distinctions between prototypes and independently validated models.
