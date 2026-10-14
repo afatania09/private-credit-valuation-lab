@@ -14,6 +14,9 @@ A public, educational Python toolkit for private credit valuation and credit-ris
 - Simple PD × LGD × EAD expected-loss illustration
 - Automated unit tests, worked examples and [methodology notes](docs/methodology.md)
 
+- Property income and refinancing: NOI, CFADS proxy, DSCR, interest coverage, direct capitalisation and LTV/DSCR borrowing constraints
+- Collateral recovery: security priority, sale haircuts, enforcement costs and recovery timing
+
 ## Run locally
 ```bash
 python -m pip install -e ".[dev]"
@@ -21,6 +24,8 @@ pytest -q
 python examples/basic_loan.py
 python examples/portfolio_stress.py
 python examples/advanced_loan_models.py
+python examples/property_secured_loan.py
+python examples/property_income_stress.py
 python examples/property_secured_loan.py
 ```
 
@@ -37,6 +42,10 @@ The DCF model discounts *contractual* cash flows at an externally supplied rate.
 
 ## Specialist case study
 [Property-secured credit methodology](docs/property_secured_credit.md) connects commercial property values to collateral recovery and enforcement stress scenarios. This is a simplified educational recovery model, not a property appraisal or IFRS valuation opinion.
+
+## Property-backed credit case studies
+- [Collateral and enforcement methodology](docs/property_secured_credit.md)
+- [Income, covenant and refinancing methodology](docs/property_income_methodology.md)
 
 ## Project principles
 Transparent formulas, synthetic data, reproducible tests, documented assumptions, conservative CI spending, and clear distinctions between prototypes and independently validated models.
