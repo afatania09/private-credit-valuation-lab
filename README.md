@@ -10,6 +10,7 @@ A public, educational Python toolkit for private credit valuation and credit-ris
 - Floating-rate bullet-loan cash flows using an explicit forward-rate path
 - Conditional default/survival and simplified recovery-weighted cash-flow valuation
 - Synthetic £100m portfolio aggregation, yield and PD sensitivity scenarios
+- Property-secured loan recovery waterfall: LTV, haircuts, costs, senior claims and discounted recoveries
 - Simple PD × LGD × EAD expected-loss illustration
 - Automated unit tests, worked examples and [methodology notes](docs/methodology.md)
 
@@ -20,6 +21,7 @@ pytest -q
 python examples/basic_loan.py
 python examples/portfolio_stress.py
 python examples/advanced_loan_models.py
+python examples/property_secured_loan.py
 ```
 
 ## Model boundaries
@@ -30,8 +32,11 @@ The DCF model discounts *contractual* cash flows at an externally supplied rate.
 2. Yield/spread sensitivity, duration and convexity
 3. Hazard-curve calibration and collateral recovery waterfalls
 4. IFRS 9 staging and discounted expected cash shortfalls
-5. Distressed loans, collateral and real estate-backed credit
+5. Real estate cash-flow modelling, refinance risk and multi-tranche security waterfalls
 6. Portfolio reporting and independent benchmark validation
+
+## Specialist case study
+[Property-secured credit methodology](docs/property_secured_credit.md) connects commercial property values to collateral recovery and enforcement stress scenarios. This is a simplified educational recovery model, not a property appraisal or IFRS valuation opinion.
 
 ## Project principles
 Transparent formulas, synthetic data, reproducible tests, documented assumptions, conservative CI spending, and clear distinctions between prototypes and independently validated models.
