@@ -19,6 +19,12 @@ A public, educational Python toolkit for private credit valuation and credit-ris
 
 - Integrated secured-credit underwriting: NOI, DSCR covenant flag, refinance gap and conditional enforcement recovery
 
+## Investment decision and portfolio monitoring
+
+- [Investment committee valuation screen](docs/investment_committee.md): purchase-price NPV, margin of safety, break-even coupon and deterministic credit downside scenarios.
+- [Portfolio credit monitoring](docs/portfolio_monitoring.md): borrower/sector concentrations, DSCR/LTV covenant flags, commitments and stress-adjusted single-year loss proxies.
+- Run `python examples/investment_committee.py` and `python examples/portfolio_monitor.py` for synthetic decision-oriented reports.
+
 ## Run locally
 ```bash
 python -m pip install -e ".[dev]"
